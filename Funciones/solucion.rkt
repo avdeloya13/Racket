@@ -27,6 +27,7 @@
   ;;;   (if (empty? l) i (my-foldl f (f (first l) i) (rest l))))  
 
 ;; ************************ Palindromo ************************
+;; Recibe numeros, cadenas y listas, y devuelve si es un palindromo o no
 
 ;; Auxiliar para palindromo. Para pasar un numero a lista.
   (define (numList n)
@@ -73,11 +74,17 @@
         (equal? (my-reverse p) p))))
   
 ; ************************ Collatz ************************
+;; Recibe un entero positivo y devuelve una lista de 
+;; transformaciones hasta convertirse en 1
+
   (define (lista-collatz x) 
     (if (= x 1) '(1)
       (cond 
         ((odd? x) (cons x (lista-collatz (+ 1 (* x 3)))))
         (else (cons x (lista-collatz (/ x 2)))))))
+
+;; Recibe un entero positivo y devuelve el numero de 
+;; transformaciones hasta que se convierte en 1
 
   ; my-length, auxiliar para pasos-collatz
   (define (my-length l)
