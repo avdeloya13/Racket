@@ -1,2 +1,2 @@
-# Racket
-para practicar el lenguaje de programación Racket.
+# Algoritmos en Racket
+Para practicar el lenguaje de programación Racket.
